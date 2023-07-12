@@ -1,0 +1,101 @@
+<div >
+<div class="container" >
+    <div class="row" >
+        <div class="col-md-2"></div>
+        <div class="col-md-8" >
+            <div class="input-group mb-3" >
+                <input type="text" class="form-control" id="input" placeholder="Enter Your City" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="city">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="input" (click)="setWeather()">Check Weather</button>
+                </div>
+              </div>
+        <div class="city-card" *ngIf="isShow">
+                <h2 class="city-card__header"> Current weather in your city</h2>
+            <div  class="city-card__box">
+                <div  class="city-card__updated-label">
+                  last update at: <span >{{lastUpdate}}</span>
+                </div>
+                <div  class="city-card__sky-icon" *ngIf="isCondition">
+                  <span  class="wi"><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+                </div>
+                <!-- <div  class="city-card__sky-icon" *ngIf="isCondition">
+                    <span  class="wi"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+                  </div>  -->
+                  <div  class="city-card__sky-icon" *ngIf="isPartCloud">
+                    <span  class="wi"><i class="fas fa-cloud-sun" aria-hidden="true"></i></span>
+                  </div> 
+                  <div  class="city-card__sky-icon" *ngIf="defaultVal">
+                    <span  class="wi"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+                  </div> 
+                <div  class="city-card__temperature" >
+                  <span  data-deg="°" data-unit="C">{{temp}} <sup>0</sup> C</span>
+                </div>
+                <div  class="city-card__city-name" title="cityname">
+                  {{cityname}}
+                 
+                  <div  class="city-card__sky-state city-card__sky-state--city-name">
+                    {{conditiontext}}
+                  </div>
+                </div>
+                 <!-- <div  class="city-card__date-time">
+                  <span  class="city-card__clock">
+                   <span >11:23
+            </span>
+
+                  </span>
+                  <span  class="city-card__date">
+                   <span>Wed Jul.12</span>
+                  </span>
+                </div>  -->
+                <div  class="divider"></div>
+                <div  class="city-card__info">
+                  <div  class="city-card__info-list">
+                    <div  class="city-card__info-list-item">
+                      <span><b>Wind speed:</b></span> {{windspeed}}
+                    </div>
+                    <div  class="city-card__info-list-item">
+                      <span><b>Humidity:</b></span> {{humidity}}
+                    </div>
+                    <div  class="city-card__info-list-item">
+                      <span><b>Pressure:</b></span> {{pressure}}
+                    </div>
+                  </div>
+                  <div  class="city-card__info-list">
+                    <div  class="city-card__info-list-item">
+                      <span><b>Cloudiness:</b></span> {{cloudy}}
+                    </div>
+                </div>
+                <div  class="divider"></div>
+                <div  class="city-card__forecasts">
+                </div>
+              </div>
+              </div>
+<!-- <div class="input-group mb-3" >
+    <input type="text" class="form-control" id="input" placeholder="Enter Your City" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="city">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" id="input" (click)="setWeather()">Check Weather</button>
+    </div>
+  </div>
+  <div class="input-group mb-3" *ngIf="isShow">
+    <div>
+    <i class="fa fa-cloud" style="font-size:36px"></i> <h1> {{temp}}<sup>0</sup> C</h1>
+</div>
+  <div>
+    <h1>{{conditiontext}}</h1>
+  </div>
+  <div>
+   <h1> {{cityname}}</h1>
+ </div>
+ <div>
+    <h1>{{windspeed}}</h1>
+   </div>
+   <div>
+    <h1>{{humidity}}</h1>
+</div>
+  </div> -->
+
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+</div>

@@ -1,0 +1,116 @@
+#input{
+    margin-top:50px !important;
+    /* color: white; */
+
+}
+#img{
+    color: #fff;background-image: url("../../assets/img/backgroung-img.jpg");
+}
+.btn btn-outline-secondary{
+    color: #fff;
+    background-color: white !important;
+}
+.city-card{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.city-card__box {
+    position: relative;
+    font-family: Roboto,sans-serif;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 2em 0 0 0;
+    margin: 0 auto;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12), 0 1px 4px rgba(0,0,0,.12);
+}
+.city-card__header{
+    padding: 1.18em 0;
+}
+
+.city-card__updated-label{
+    position: absolute;
+    top: 3.8em;
+    right: 0;
+    width: 30%;
+    color: #9a9a9a;
+    font-size: .5em;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    opacity: .8;
+    padding: 0.3em 3% 0.2em 0;
+    background: -webkit-linear-gradient(left,hsla(0,0%,100%,0),#f7f5f5);
+}
+
+.city-card__sky-icon{
+    position: absolute;
+    top: 2.5em;
+    left: 8%;
+}
+
+.city-card__temperature{
+    font-size: 4em;
+    text-align: center;
+}
+
+.city-card__city-name{
+    width: 74%;
+    font-size: 2em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto 0.5em auto;
+}
+
+.city-card__date-time{
+    position: absolute;
+    top: 3em;
+    right: 3%;
+    font-size: 1em;
+    text-align: right;
+}
+
+.divider {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    margin: 1em auto 1em auto;
+}
+.city-card__info-list-item{
+    padding-left: 90px;
+}
+
+.city-card__info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: .8em;
+    padding:20px;
+    color: #fff;
+
+}
+.city-card__sky-icon .wi{
+    font-size: 6em;
+}
+.wi {
+    display: inline-block;
+    font-family: weathericons;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.city-card__temperature>span{
+    position: relative;
+    left: -10px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+.wi-day-cloudy:before {
+    content: "\F002";
+}
